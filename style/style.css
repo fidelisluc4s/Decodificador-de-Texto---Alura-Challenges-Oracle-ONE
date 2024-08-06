@@ -1,54 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CU&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
+* {    
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    background-color: rgba(216, 223, 232, 1);
+body {    
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(16, 16, 17);
 }
 
 .app__background {
     height: 100%;
     padding: 1rem 1.5rem 0 2rem;
+    height: 100vh;
+    background: rgba(243, 245, 252, 1);
+    background-size: cover;    
 }
 
-header {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    gap: 40px;
+header { 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 256px;
+    height: 100px;
 }
 
 header img {
     height: 48px;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    padding: 1rem 1rem 1rem 1rem;
+main {    
     display: flex;
 }
 /*Conteiner lateral esquerdo*/
 .contener__msg__ida {
-    width: 800px;
-    height: 744px;  
+    width: 700px;
+    height: 644px;  
     margin-left: 100px;  
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .contener__texto{
     width: 680px;
-    height: 48px;
+    height: 48px;    
 }
 
 .contener__texto textarea{
@@ -64,35 +61,67 @@ main {
     width: 100%; /* Ajustar a largura conforme necessário */
     height: auto; /* Ajustar a altura conforme necessário */
     height: calc(60px*5);
-    overflow: hidden; 
+    overflow: hidden;     
+}
+
+.contener__btn i{   
+    margin: 10px;
+}
+
+.button__grupo{
+    width: 680px;
+    height:67px;
+}
+.button__grupo button{   
+    width: 280px;
+    height: 50px;
     
 }
-.button__grupo button{  
-    
-    border-radius: 4px 4px 4px 4px;    
-    background: rgba(10, 56, 113, 1);
-    color: wheat;
-    font-family: "Inter",sans-serif;
-    font-size: 16px;
+
+.button__crip{
+    padding: 0.6rem 2rem;
+    margin-right: 0.75rem;
     font-weight: 400;
-    line-height: 19.36px;
-    text-align: center;
+    border-radius: 20rem;
+    font-family: "Inter",sans-serif;
+    background: rgba(10, 56, 113, 1);
+    font-size: 16px;
+    border: 1px solid rgba(10, 56, 113, 1);
+    color: rgba(255, 255, 255, 1);
 
+}
 
+.button__desc{
+    padding: 0.6rem 2rem;
+    margin-right: 0.75rem;
+    font-weight: 400;
+    border-radius: 20rem;
+    font-family: "Inter",sans-serif;
+    background: rgba(10, 56, 113, 1);
+    font-size: 16px;
+    background: rgba(216, 223, 232, 1);
+    color: rgba(10, 56, 113, 1);
+}
+.button__crip:hover{
+    background-color: gray;
+}
+
+.button__desc:hover{
+    background-color: gray;
 }
 /*Fim Conteiner lateral esquerdo*/
 
 /* Conteiner lateral direito*/
 .contener {
     width: 400px;
-    height: 944px;
+    height: 700px;
     margin: auto;
     border-radius: 32px;
     background-color: rgba(255, 255, 255, 1);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 24px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
 .contener__msg__criptografada {
@@ -124,7 +153,16 @@ main {
     color: rgba(10, 56, 113, 1);
 }
 /*Fim Conteiner lateral direito*/
-footer {
-    padding: 1em;
-    text-align: center;
+footer {    
+     
 }
+
+.rodape {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba(52, 58, 64, 1);
+}
+
