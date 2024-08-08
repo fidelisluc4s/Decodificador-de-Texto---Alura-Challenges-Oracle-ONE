@@ -1,5 +1,5 @@
 let campo = document.querySelector('#text__area');
-let texto = document.querySelector('.contener__msg__criptografada');
+let texto = document.querySelector('.contener');
 let msgCriptografada = '';
 
 function criptografarTexto() {
@@ -22,14 +22,20 @@ function criptografarTexto() {
             textoCriptografado += caractere;
         }
     }
-    return texto.innerHTML = textoCriptografado;
+    return texto.innerHTML =`<div class="contener">
+                            <div class="conteiner__hidden"> 
+                            <p class="texto__conteiner">${textoCriptografado}</p>
+                            <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
+                            </div>                        
+                            </div>
+    `;
 }
 
 function descriptografarTexto() {
     let textoParaDescriptografar = campo.value;
     let textoDescriptografar = '';
     let i = 0;
-    
+
     while (i < textoParaDescriptografar.length) {
         let caractere = textoParaDescriptografar[i];
 
@@ -50,11 +56,17 @@ function descriptografarTexto() {
         } else if (textoParaDescriptografar.substr(i, 4) === 'ufat') {
             textoDescriptografar += 'u';
             i += 4;
-        }else {
+        } else {
             textoDescriptografar += caractere;
             i++;
         }
     }
-    return texto.innerHTML = textoDescriptografar;
+    return texto.innerHTML = `<div class="contener">
+                            <div class="conteiner__hidden"> 
+                            <p class="texto__conteiner">${textoDescriptografar}</p>
+                            <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
+                            </div>                        
+                            </div>
+    `;
 
 }
