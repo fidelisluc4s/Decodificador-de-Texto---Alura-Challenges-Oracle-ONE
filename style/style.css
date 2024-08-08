@@ -131,6 +131,10 @@ main {
     gap: 16px;
 }
 
+.contener__msg__criptografada{
+    white-space: normal;
+    word-wrap: break-word;
+}
 .contener__msg__informativa h1 { 
     height: 58px;   
     margin: 0.5em 0;
