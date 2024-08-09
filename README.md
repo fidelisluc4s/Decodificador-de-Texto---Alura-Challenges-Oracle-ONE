@@ -30,22 +30,22 @@ cd Decodificador-de-Texto---Alura-Challenges-Oracle-ONE
 
 ## Funcionalidades
 
-🔐 Criptografar texto.
-🔓 Descriptografar texto.
-🔄 Resetar o campo de entrada e a área de saída.
+* 🔐 Criptografar texto.
+* 🔓 Descriptografar texto.
+* 🔄 Resetar o campo de entrada e a área de saída.
 
 ##💻 Tecnologias Utilizadas
 
-HTML
-CSS
-JavaScript
+* HTML ;NBSP
+* CSS ;NBSP
+* JavaScript ;NBSP
 
 ##📁 Estrutura de Pastas
 
-index.html: Arquivo HTML principal.
-css/styles.css: Arquivo CSS para estilização.
-js/script.js: Arquivo JavaScript para funcionalidades.
-assets/images: Diretório para imagens do projeto.
+* index.html: Arquivo HTML principal. ;NBSP
+* css/styles.css: Arquivo CSS para estilização. ;NBSP
+* js/script.js: Arquivo JavaScript para funcionalidades. ;NBSP
+* assets/images: Diretório para imagens do projeto. ;NBSP
 
 ##🤝 Contribuição
 
@@ -54,4 +54,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para fazer um fork deste pr
 ##📜 Licença
 Este projeto está licenciado sob a MIT License.
 
-Desenvolvido por Lucas Fidelis.
+[^1]:Desenvolvido por Lucas Fidelis.
