@@ -1,6 +1,7 @@
 let campo = document.querySelector('#text__area');
 let texto = document.querySelector('.contener');
 let msgCriptografada = '';
+let textoCopiado = false;
 
 function criptografarTexto() {
     let textoParaCriptografar = campo.value;
@@ -22,13 +23,27 @@ function criptografarTexto() {
             textoCriptografado += caractere;
         }
     }
-    return texto.innerHTML =`<div class="contener">
+    campo.value = '';
+
+    if (textoCopiado) {
+        textoCopiado = false;
+        return texto.innerHTML = `<div class="contener">
+                                    <div class="contener__msg__criptografada">
+                                        <img src="/assets/procurando.png" alt="procurando msg">
+                                            <div class="contener__msg__informativa">
+                                                <h1>Nenhuma mensagem encontrada</h1>
+                                                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                                            </div>
+                                    </div>
+                                </div>`;
+    } else {
+    texto.innerHTML = `<div class="contener">
                             <div class="conteiner__hidden"> 
-                            <p class="texto__conteiner">${textoCriptografado}</p>
-                            <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
+                                <p class="texto__conteiner">${textoCriptografado}</p>
+                                <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
                             </div>                        
-                            </div>
-    `;
+                        </div>`;
+    }   
 }
 
 function descriptografarTexto() {
@@ -61,12 +76,56 @@ function descriptografarTexto() {
             i++;
         }
     }
-    return texto.innerHTML = `<div class="contener">
-                            <div class="conteiner__hidden"> 
-                            <p class="texto__conteiner">${textoDescriptografar}</p>
-                            <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
-                            </div>                        
+    campo.value = '';
+    if (textoCopiado) {
+        textoCopiado = false;
+        texto.innerHTML = `<div class="contener">
+                            <div class="contener__msg__criptografada">
+                                <img src="/assets/procurando.png" alt="procurando msg">
+                                <div class="contener__msg__informativa">
+                                    <h1>Nenhuma mensagem encontrada</h1>
+                                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                                </div>
                             </div>
-    `;
+                        </div>`;
+    } else {
+        texto.innerHTML = `<div class="contener">
+                            <div class="conteiner__hidden">
+                                <p class="texto__conteiner">${textoDescriptografar}</p>
+                                <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
+                            </div>                        
+                        </div>`;
+    }
 
+
+}
+
+function copiarTexto() {
+    let textoParaCopiar = document.querySelector('.texto__conteiner').innerText;
+
+    navigator.clipboard.writeText(textoParaCopiar)
+        .then(() => {
+            mostrarMensagemDeSucesso();
+            textoCopiado = true;
+            criptografarTexto();
+        })
+        .catch(err => {
+            console.error('Erro ao copiar o texto: ', err);
+        });
+
+}
+
+function mostrarMensagemDeSucesso() {
+    let textoParaCopiar = document.querySelector('.texto__conteiner');
+    let mensagem = document.createElement('div');
+
+    mensagem.innerText = 'Texto copiado!';
+    mensagem.classList.add('mensagem__sucesso');
+
+    textoParaCopiar.parentElement.style.position = 'relative';
+    textoParaCopiar.parentElement.appendChild(mensagem);
+
+    setTimeout(() => {
+        mensagem.remove();
+    }, 3000);
 }
