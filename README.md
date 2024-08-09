@@ -1,7 +1,9 @@
-🌟 Challenge Alura
+# 🌟 Challenge Alura
+
 Projeto de criptografia e descriptografia desenvolvido para o desafio da Alura. Utiliza HTML, CSS e JavaScript para fornecer uma interface simples e intuitiva.
 
-🗂 Estrutura do Projeto
+## 🗂 Estrutura do Projeto
+
 Decodificador-de-Texto---Alura-Challenges-Oracle-ONE/
 ├── .gitignore
 ├── index.html
@@ -12,16 +14,20 @@ Decodificador-de-Texto---Alura-Challenges-Oracle-ONE/
 │   └── styles.css
 ├── js/
     └── script.js
-🚀 Como Usar
+
+## 🚀 Como Usar
+
 Clone o repositório:
-https://github.com/fidelisluc4s/Decodificador-de-Texto---Alura-Challenges-Oracle-ONE.git
+
+```bash
+git@github.com:fidelisluc4s/Decodificador-de-Texto---Alura-Challenges-Oracle-ONE.git
 
 Navegue até o diretório do projeto:
 cd Decodificador-de-Texto---Alura-Challenges-Oracle-ONE
 
 Abra o arquivo index.html no seu navegador preferido para ver o projeto em funcionamento.
 
-⚙️ Funcionalidades
+Funcionalidades
 🔐 Criptografar texto.
 🔓 Descriptografar texto.
 🔄 Resetar o campo de entrada e a área de saída.
