@@ -5,15 +5,15 @@ Projeto de criptografia e descriptografia desenvolvido para o desafio da Alura. 
 ## 🗂 Estrutura do Projeto
 
 Decodificador-de-Texto---Alura-Challenges-Oracle-ONE/
-├── .gitignore
-├── index.html
-├── README.md
-├── assets/
-│   └── images/
-├── css/
-│   └── styles.css
-├── js/
-    └── script.js
+├── .gitignore;NBSP
+├── index.html;NBSP
+├── README.md;NBSP
+├── assets/;NBSP
+│   └── images/;NBSP
+├── css/;NBSP
+│   └── styles.css;NBSP
+├── js/;NBSP
+    └── script.js;NBSP
 
 ## 🚀 Como Usar
 
@@ -36,16 +36,16 @@ cd Decodificador-de-Texto---Alura-Challenges-Oracle-ONE
 
 ##💻 Tecnologias Utilizadas
 
-* HTML ;NBSP
-* CSS ;NBSP
-* JavaScript ;NBSP
+* HTML
+* CSS
+* JavaScript
 
 ##📁 Estrutura de Pastas
 
-* index.html: Arquivo HTML principal. ;NBSP
-* css/styles.css: Arquivo CSS para estilização. ;NBSP
-* js/script.js: Arquivo JavaScript para funcionalidades. ;NBSP
-* assets/images: Diretório para imagens do projeto. ;NBSP
+* index.html: Arquivo HTML principal.
+* css/styles.css: Arquivo CSS para estilização.
+* js/script.js: Arquivo JavaScript para funcionalidades.
+* assets/images: Diretório para imagens do projeto.
 
 ##🤝 Contribuição
 
