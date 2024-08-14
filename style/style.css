@@ -16,12 +16,12 @@
 body {
     margin: 0;
     padding: 0;
+    background: var(--segunda-cor);
 }
 
 .app__background {
     height: 100vh;
     padding: 1rem 1.5rem 0 2rem;
-    background: var(--segunda-cor);
     background-size: cover;
 }
 
@@ -207,19 +207,50 @@ main {
 
 /*Fim Conteiner lateral direito*/
 footer {
+    background-color: var(--segunda-cor);
     padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 1px solid #685e5e;
 }
 
 .rodape {
-    padding: 1rem;
-    text-align: center;
     font-family: var(--font-tipo);
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    color: var(--font-cor);
-    margin: 0;
+    font-size: 18px;
+    color: var(--segunda-font-cor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
+
+.rodape-links {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.rodape-links a {
+    text-decoration: none;
+}
+
+.rodape-links img {
+    transition: transform 0.3s;
+    width: 20px;
+    height: 20px;
+}
+
+.rodape-links img:hover {
+    transform: scale(1.1);
+}
+
+.rodape p {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
 
 
 /*Mensagem*/
