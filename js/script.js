@@ -27,7 +27,8 @@ function criptografarTexto() {
 
     if (textoCopiado) {
         textoCopiado = false;
-        return texto.innerHTML = `<div class="contener">
+        setTimeout(() => {
+            texto.innerHTML = `<div class="contener">
                                     <div class="contener__msg__criptografada">
                                         <img src="/assets/procurando.png" alt="procurando msg">
                                             <div class="contener__msg__informativa">
@@ -36,14 +37,18 @@ function criptografarTexto() {
                                             </div>
                                     </div>
                                 </div>`;
+        }, 2000);
+
     } else {
-    texto.innerHTML = `<div class="contener">
+        setTimeout(() => {
+            texto.innerHTML = `<div class="contener">
                             <div class="conteiner__hidden"> 
                                 <p class="texto__conteiner">${textoCriptografado}</p>
                                 <button class="button__copiar" onclick="copiarTexto()">Copiar</button>
                             </div>                        
                         </div>`;
-    }   
+        }, 200);
+    }
 }
 
 function descriptografarTexto() {
@@ -127,5 +132,5 @@ function mostrarMensagemDeSucesso() {
 
     setTimeout(() => {
         mensagem.remove();
-    }, 3000);
+    }, 2000);
 }

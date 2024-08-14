@@ -240,7 +240,6 @@ footer {
 /*Mensagem*/
 
 .mensagem__sucesso{
-    
    background-color: var(--primeira-cor);
    color: var(--segunda-cor);
    padding: 5px 10px;
