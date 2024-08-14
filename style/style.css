@@ -14,7 +14,7 @@
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -80,6 +80,7 @@ main {
 
 .contener__btn i {
     margin: 10px;
+    font-size: 15px;
     color: var(--segunda-font-cor);
 }
 
@@ -88,13 +89,15 @@ main {
     width: 280px;
     height: 50px;
     cursor: pointer;
-    transition: background 0.3s;
+    margin-right: 0.75rem;
+}
 
+.button__grupo button:last-child {
+    margin-right: 0; 
 }
 
 .button__crip {
     padding: 0.6rem 2rem;
-    margin-right: 0.75rem;
     font-weight: 400;
     border-radius: 20rem;
     font-family: var(--font-tipo);
@@ -106,7 +109,6 @@ main {
 }
 
 .button__desc {
-    margin-right: 0.75rem;
     font-weight: 400;
     border-radius: 20rem;
     font-family: var(--font-tipo);
@@ -117,7 +119,6 @@ main {
 .button__copiar {
     width: 280px;
     height: 50px;
-    margin-right: 0.75rem;
     font-weight: 400;
     border-radius: 20rem;
     font-family: var(--font-tipo);
@@ -128,29 +129,11 @@ main {
     transition: background 0.3s;
 }
 
-.button__crip:hover {
+.button__crip:hover, .button__desc:hover, .button__copiar:hover {
     background-color: var(--button-cor);
 }
 
-.button__crip:focus {
-    outline: 3px solid rgba(34, 150, 246, 1);
-    outline-offset: 2px;
-}
-
-.button__desc:hover {
-    background-color: var(--button-cor);
-}
-
-.button__desc:focus {
-    outline: 3px solid rgba(34, 150, 246, 1);
-    outline-offset: 2px;
-}
-
-.button__copiar:hover {
-    background-color: var(--button-cor);
-}
-
-.button__copiar:focus {
+.button__crip:focus,.button__desc:focus ,.button__copiar:focus {
     outline: 3px solid rgba(34, 150, 246, 1);
     outline-offset: 2px;
 }
@@ -224,11 +207,11 @@ main {
 
 /*Fim Conteiner lateral direito*/
 footer {
-    padding: 1em;
-    background-color: rgba(240, 240, 240, 1);
+    padding: 1rem;
 }
 
 .rodape {
+    padding: 1rem;
     text-align: center;
     font-family: var(--font-tipo);
     font-size: 20px;
@@ -289,22 +272,16 @@ footer {
         display: none;
     }
 
-    .contener__msg__criptografada {
-        display: flex;
-    }
 
     .contener__msg__ida {
         width: 100%;
+        height: 500px;
         margin-left: 0;
         align-items: center;
     }
 
     .contener__texto,
     #text__area {
-        width: 100%;
-    }
-
-    .button__grupo button {
         width: 100%;
     }
 
@@ -317,9 +294,85 @@ footer {
 
     .conteiner__hidden {
         width: 100%;
+        height: 400px;
     }
 
     .texto__conteiner {
         width: 100%;
+    }
+
+    .contener__btn i {
+        font-size: 10px;
+    }
+
+    .button__grupo button {
+        width: 280px;
+        height: 50px;
+
+    }
+
+    .button__crip,.button__desc {
+        padding: 0.6rem 2rem;
+        margin-right: 0.75rem;
+        font-weight: 400;
+        border-radius: 20rem;
+        font-family: var(--font-tipo);
+        background: var(--primeira-cor);
+        font-size: 16px;
+        border: 1px solid var(--primeira-cor);
+        color: rgba(255, 255, 255, 1);
+
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .app__background {
+        padding: 0.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items:flex-start;
+        height: auto;
+    }
+
+    header img {
+        height: 30px;
+    }
+
+    .contener__msg__ida {
+        width: 100%;
+        height: 500px;
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    .contener__texto,#text__area {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .button__grupo button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .contener {
+        width: 100%;
+        margin: 10px 0 0;
+        border-radius: 16px;
+    }
+    .contener__msg__criptografada {
+        display: flex;
+    }
+
+    .texto__conteiner {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .rodape {
+        font-size: 16px;
     }
 }
